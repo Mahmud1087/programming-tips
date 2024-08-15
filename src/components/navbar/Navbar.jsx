@@ -1,3 +1,4 @@
+import { Moon, Search } from 'lucide-react';
 import WidthContainer from '../WidthContainer';
 
 const Navbar = () => {
@@ -5,19 +6,35 @@ const Navbar = () => {
     <nav className='shadow-md py-4'>
       <WidthContainer>
         <div className='flex items-center justify-between'>
-          <h1 className='w-16 h-16 rounded-full flex items-center justify-center bg-prim text-white font-medium text-2xl'>
+          <h1 className='w-14 h-14 rounded-full flex items-center justify-center bg-prim text-white font-medium text-2xl'>
             pT
           </h1>
-          <form>
-            <label htmlFor='search'>
-              <input
-                type='text'
-                placeholder='Search for tips...'
-                className='w-full pl-4 pr-8 text-sm border-none rounded-md focus:outline-none focus:border-gray-300'
-              />
-              <button type='submit'>Search</button>
-            </label>
-          </form>
+          <section className='flex items-center gap-20'>
+            <form className='w-[32rem] h-14 flex items-center '>
+              <label
+                htmlFor='search'
+                className='flex items-center gap-5 w-full h-full px-3 border-2 shadow border-gray-300 rounded-md'
+              >
+                <aside className='flex items-center gap-5 w-full h-full'>
+                  <Search color='#aeaeae' />
+                  <input
+                    type='text'
+                    placeholder='Search by keywords, language, or tags...'
+                    className='w-full h-full border-none rounded-md bg-transparent focus:outline-none'
+                  />
+                </aside>
+                <button
+                  type='submit'
+                  className='bg-sec px-5 text-white font-medium text-lg py-1 rounded-md'
+                >
+                  Search
+                </button>
+              </label>
+            </form>
+            <button type='button'>
+              <Moon />
+            </button>
+          </section>
         </div>
       </WidthContainer>
     </nav>
