@@ -3,9 +3,9 @@ import WidthContainer from '../WidthContainer';
 
 const Navbar = () => {
   return (
-    <nav className='shadow-md py-4'>
+    <nav className='fixed z-50 bg-white w-full shadow-md h-24 flex items-center'>
       <WidthContainer>
-        <div className='flex items-center justify-between'>
+        <div className='h-full w-full flex items-center justify-between'>
           <h1 className='w-14 h-14 rounded-full flex items-center justify-center bg-prim text-white font-medium text-2xl'>
             pT
           </h1>
@@ -25,13 +25,13 @@ const Navbar = () => {
                 </aside>
                 <button
                   type='submit'
-                  className='bg-sec px-5 text-white font-medium text-lg py-1 rounded-md'
+                  className='bg-sec px-5 text-white font-medium text-lg py-1 rounded-md  hover:bg-sec/70 transition-all'
                 >
                   Search
                 </button>
               </label>
             </form>
-            <button type='button'>
+            <button type='button' className='hidden lg:block'>
               <Moon />
             </button>
           </section>

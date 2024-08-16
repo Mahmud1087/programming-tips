@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-html: 227 79 38;
+    --color-css: 38 77 228;
+    --color-js: 247 223 30;
+    --color-java: 248 152 32;
+    --color-ruby: 204 52 45;
+    --color-cplus: 4 79 136;
+    --color-python: 69 132 182;
+  }
+}
